@@ -28,7 +28,7 @@ set re=1
 set ttyfast
 set lazyredraw
 
-colorscheme PaperColor 
+colorscheme PaperColor
 "colorscheme one 
 "color tender 
 "hi Normal guibg=NONE ctermbg=NONE
@@ -105,3 +105,9 @@ map <Leader>h <Plug>(easymotion-linebackward)
 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" use ctrl+h/j/k/l switch window
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
