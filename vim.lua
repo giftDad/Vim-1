@@ -260,4 +260,3 @@ vim.cmd('hi DiagnosticVirtualTextWarn guifg=#ff8800 ctermfg=red')
 vim.cmd('hi DiagnosticVirtualTextInfo guifg=#00ffff ctermfg=red')
 vim.cmd('hi DiagnosticVirtualTextHint guifg=#00ff00 ctermfg=red')
 
-			require("copilot_cmp").setup()

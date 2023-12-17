@@ -91,18 +91,6 @@ return require('packer').startup(function()
 			})
 		end,
 	}
-	use {
-		"zbirenbaum/copilot-cmp",
-		-- after = { "copilot.lua" },
-		config = function ()
-			require("copilot_cmp").setup()
-		end,
-		formatters = {
-			label = require("copilot_cmp.format").format_label_text,
-			insert_text = require("copilot_cmp.format").format_insert_text,
-			preview = require("copilot_cmp.format").deindent,
-		},
-	}
 
 	use { 'onsails/lspkind.nvim' }
 
@@ -116,7 +104,7 @@ return require('packer').startup(function()
 	use {	'jiangmiao/auto-pairs' }
 	-- use {	'junegunn/fzf.vim' }
 	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
+		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		requires = { {'nvim-lua/plenary.nvim'} },
 	}
 

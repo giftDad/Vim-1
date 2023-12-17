@@ -20,8 +20,8 @@ set mmp=5000  "pattern uses more memory than 'maxmempattern'
 let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 set fillchars=vert:\|
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 "set nu
 "set rnu
 
@@ -40,6 +40,14 @@ colorscheme sonokai
 " colorscheme material
 " colorscheme OceanicNext
 "colorscheme one
+" let g:go_highlight_methods = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_function_calls = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_types = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_highlight_generate_tags = 1
+" let g:go_highlight_format_strings = 1
 
 
 nnoremap <silent> <c-u> :Mru<cr>
@@ -181,4 +189,14 @@ command! -nargs=* -range GoClearTags lua require('go.struct_tag').clear_tags({<l
 
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
         let g:copilot_no_tab_map = v:true
+
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" use ctrl+h/j/k/l switch window
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
